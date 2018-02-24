@@ -133,6 +133,11 @@ require_relative '../models/address_book'
           puts "#{entry.name} has been deleted"
         end
 
+        def demolish
+          address_book.entries.delete
+          puts "all entris has been deleted"
+        end
+
         def edit_entry(entry)
           print "Updated name: "
           name = gets.chomp
